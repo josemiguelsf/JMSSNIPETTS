@@ -1,0 +1,139 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<script type="text/javascript" src="js/jquery-1.4.4.min.js"></script>
+<link href="css/styles.css" rel="stylesheet" type="text/css" />
+<link href="css/menu_styles.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<div class="menu">
+<script type="text/javascript"> 
+$(document).ready(function(){
+	
+	$(".mi").hover(function() {
+			var timeout = $(this).data("timeout");
+    		if(timeout) clearTimeout(timeout);
+      
+			$(this).find("span").addClass("subhover");
+			$(this).find("ul.subnav").slideDown('fast').show();
+		},
+		function(){
+				//$(this).find("ul.subnav").slideUp('slow'); 
+				//$(this).find("span").removeClass("subhover");
+				$(this).data("timeout", setTimeout($.proxy(function() 
+				{ 
+					$(this).find("ul.subnav").slideUp('slow'); 
+					$(this).find("span").removeClass("subhover");
+				}, this), 500)); 
+			}
+	);
+
+});
+</script>
+<ul class="topnav">
+      <li><a href="#">Home</a></li>
+      <li class="mi">
+          <a href="#">Projects</a>
+          <ul class="subnav">
+              <li><a href="#">Projects List</a></li>
+              <li><a href="#">Create Project</a></li>
+          </ul>
+		  <span></span>
+      </li>
+      <li class="mi">
+          <a href="#">Units</a>
+          <ul class="subnav">
+              <li><a href="#">Units List</a></li>
+              <li><a href="#">Create Unit</a></li>
+          </ul>
+		  <span></span>
+      </li>
+      <li class="mi">
+          <a href="#">Classes</a>
+          <ul class="subnav">
+              <li><a href="#">Manage Countries</a></li>
+              <li><a href="#">Unit Types</a></li>
+          </ul>
+		  <span></span>
+      </li>
+      <li class="mi">
+          <a href="#">Admin</a>
+          <ul class="subnav">
+              <li><a href="#">Admin Profile</a></li>
+              <li><a href="#">Manage Users</a></li>
+              <li><a href="#">Create User</a></li>
+          </ul>
+		  <span></span>
+      </li>
+      <li><a href="#">Help</a></li>
+</ul>
+<div class="login_welcome">
+  welcome <strong><?=sess_var('name')?></strong> <a href="#">logout</a>
+</div>
+<div style="clear:both"></div>
+</div>
+
+<div style="height:100%;">
+	<div id="side_panel">
+	<ul>
+	  <li><a href="#">Projects List</a></li>
+	  <li><a href="#">Add Project</a></li>
+	  <li><a href="#">Add Unit</a></li>
+	  <li><a href="#">Manage Users</a></li>
+	  <li><a href="#">Add User</a></li>
+	</ul>
+    </div>
+	<div style="float:left; width:80%">
+		<div id="content_panel">
+<div id="container">
+<div class="toolbar"><a href="#"><img src="images/ico-back.png" width="48" height="40" border="0" align="left" style="padding-top:13px" /></a><a href="#" title="Project Info." id="info"><img src="images/imgs_2x2.png" width="50" height="51" border="0" /></a><a href="#" title="Images"><img src="images/imgs_2x4.png" width="61" height="51" border="0" /></a><a href="#" title="Videos"><img src="images/imgs_2x5.png" width="54" height="51" border="0" /></a><a href="#" title="Files"><img src="images/imgs_2x6.png" width="57" height="51" border="0" /></a><a href="#" title="Links"><img src="images/imgs_2x7.png" width="52" height="51" border="0" /></a>
+  <div style="clear:both"></div>
+</div>
+<div id="form_loader">
+	<div class="form_block" id="add_project">
+	<div class="form_title">Create Project</div>
+	<div class="form" style="background:url(images/ico-projects.png) no-repeat top right">
+	<form action="#" method="post" onsubmit="return false" id="form">
+		<br />
+		<div class="sepa">
+		  <label for="name">Name</label>
+		<input name="name" type="text" id="name" value="<?=@$name?>" class="validate[required,length[4,160]]" />
+		</div>
+		
+		<div class="sepa">
+		  <label for="description">Description</label>
+		  <textarea name="description" id="description"><?=@$description?></textarea>
+		</div>
+		
+		<div class="sepa">
+		<label for="status">Status</label>
+		<select name="status" id="status">
+		  <option value="1" selected="selected" >Active</option>
+		  <option value="0" <?=(isset($status) && ! @$status)? "selected='selected'":"" ?> >Not Active</option>
+		  </select>
+		</div>
+		
+		<div class="sepa">
+		<label for="submit">&nbsp;</label>
+		<input type="submit" value="Submit" />
+		&nbsp;&nbsp;
+		<input name="cancel" type="button" id="cancel" value="Cancel" onclick="load_content('projects')" />
+		</div>
+	</form>
+	</div>
+	</div>
+</div>
+
+<div id="tab_loader" style="display:none"></div>
+
+</div>
+		</div>
+	</div>
+	<div style="clear:both"></div>
+</div>
+
+</body>
+</html>

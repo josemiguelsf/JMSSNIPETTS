@@ -1,0 +1,58 @@
+ul#androidDark,ul#androidDark ul{
+	margin:0;list-style:none;padding:0;background-color:#dedede;border-width:1px;border-style:solid;border-color:#5F5F5F;}
+ul#androidDark .frame{
+	display:none;position:absolute;left:-6px;top:100%;background-image:url("sub.png");}
+ul#androidDark li:hover>*{
+	display:block;}
+ul#androidDark li:hover{
+	position:relative;}
+ul#androidDark ul .frame{
+	position:absolute;left:94%;top:0;}
+ul#androidDark .trCorner,ul#androidDark .blCorner{
+	display:block;margin:0;font-size:0;position:absolute;width:15px;height:15px;background-image:url("sub.png");}
+ul#androidDark .trCorner{
+	left:100%;top:0;background-position:100% 0;}
+ul#androidDark .blCorner{
+	left:0;top:100%;background-position:0 100%;}
+ul#androidDark{
+	display:block;font-size:0;float:left;}
+ul#androidDark ul{
+	position:relative;left:15px;top:15px;border:none;background-image:url("sub.png");background-position:100% 100%;padding:0 15px 15px 0;background-color:#424542;border-width:0px;border-style:none;}
+ul#androidDark li{
+	display:block;white-space:nowrap;font-size:0;float:left;}
+ul#androidDark>li,ul#androidDark li{
+	margin:0;}
+ul#androidDark a:active, ul#androidDark a:focus{
+	outline-style:none;}
+ul#androidDark a{
+	display:block;vertical-align:middle;text-align:left;text-decoration:none;font:normal 14px Tahoma;color:#FFF;cursor:pointer;padding:4px;background-color:#424542;background-image:url("none");background-repeat:repeat;border-width:0px;border-style:solid;border-color:#C0C0C0;}
+ul#androidDark ul li{
+	float:none;margin:0;}
+ul#androidDark ul a{
+	text-align:left;padding:1px 6px 8px;}
+ul#androidDark li:hover>a{
+	background-color:#424542;border-color:#C0C0C0;border-style:solid;font:normal 14px Tahoma;color:#F2B20E;text-decoration:none;background-image:url("none");}
+ul#androidDark img{
+	border:none;vertical-align:middle;margin-right:4px;}
+ul#androidDark img.over{
+	display:none;}
+ul#androidDark li:hover > a img.def{
+	display:none;}
+ul#androidDark li:hover > a img.over{
+	display:inline;}
+ul#androidDark span{
+	display:block;overflow:visible;background-position:right center;background-repeat:no-repeat;padding-right:0px;}
+ul#androidDark ul span{
+	background-image:url("arrowsub.png");padding-right:12px;}
+ul#androidDark li.topfirst>a{
+	height:30px;background-color:#444444;background-image:url("back0_0.png");border-width:0px;border-style:none;border-color:#C0C0C0;font:bold 14px Trebuchet MS,sans-serif;color:#000;line-height:30px;}
+ul#androidDark li.topfirst:hover>a{
+	background-color:#444444;background-image:url("back0_1.png");border-style:none;border-color:#C0C0C0;font:bold 14px Trebuchet MS,sans-serif;color:#FFF;line-height:30px;}
+ul#androidDark li.topmenu>a{
+	height:30px;background-color:#444444;background-image:url("back0_0.png");border-width:0 0 0 1px;border-style:solid;border-color:#C0C0C0;font:bold 14px Trebuchet MS,sans-serif;color:#000;line-height:30px;}
+ul#androidDark li.topmenu:hover>a{
+	background-color:#444444;background-image:url("back0_1.png");border-style:solid;border-color:#C0C0C0;font:bold 14px Trebuchet MS,sans-serif;color:#FFF;line-height:30px;}
+ul#androidDark li.ln>a{
+	height:30px;background-color:#444444;background-image:url("back0_0.png");border-width:0 0 0 1px;border-style:solid;border-color:#C0C0C0;font:bold 14px Trebuchet MS,sans-serif;color:#000;line-height:30px;}
+ul#androidDark li.ln:hover>a{
+	background-color:#444444;background-image:url("back0_1.png");border-style:solid;border-color:#C0C0C0;font:bold 14px Trebuchet MS,sans-serif;color:#FFF;line-height:30px;}
